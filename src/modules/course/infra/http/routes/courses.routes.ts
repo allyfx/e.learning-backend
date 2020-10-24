@@ -8,5 +8,6 @@ const courseRouter = Router();
 courseRouter.use(ensureAuthenticated);
 
 courseRouter.post('/course/create', CoursesController.create);
+courseRouter.put('/course/update/:id', CoursesController.update);
 
 export default courseRouter;

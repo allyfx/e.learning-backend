@@ -15,7 +15,7 @@ class CreateUserService {
 
         await coursesRepository.save(course);
 
-        return course
+        return course;
     }
 }
 
