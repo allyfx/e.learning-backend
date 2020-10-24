@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 
-import CreateCourseService from '../../../services/CreateCourseService';
+import CreateCourseService from '@modules/course/services/CreateCourseService';
 
 export default {
     async create(request: Request, response: Response): Promise<Response> {

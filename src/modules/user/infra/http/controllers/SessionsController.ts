@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 
-import AuthenticateUserService from '../../../services/AuthenticateUserService';
+import AuthenticateUserService from '@modules/user/services/AuthenticateUserService';
 
 export default {
     async create(request: Request, response: Response): Promise<Response> {
