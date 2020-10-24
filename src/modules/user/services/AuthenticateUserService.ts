@@ -1,4 +1,5 @@
 import { getRepository } from 'typeorm';
+
 import { sign } from 'jsonwebtoken';
 
 import auth from '../../../config/auth';
