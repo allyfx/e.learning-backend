@@ -5,10 +5,7 @@ import SessionsController from '../controllers/SessionsController';
 
 const usersRouter = Router();
 
-const usersController = new UsersController();
-const sessionsController = new SessionsController();
-
-usersRouter.post('/user/create', usersController.create);
-usersRouter.post('/user/authenticate', sessionsController.create);
+usersRouter.post('/user/create', UsersController.create);
+usersRouter.post('/user/authenticate', SessionsController.create);
 
 export default usersRouter;
