@@ -29,7 +29,7 @@ export default class CreateLessonsTable1603642879591 implements MigrationInterfa
                 },
                 {
                     name: 'description',
-                    type: 'varchar',
+                    type: 'text',
                 },
                 {
                     name: 'video_id',
