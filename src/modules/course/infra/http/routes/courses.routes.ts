@@ -5,8 +5,9 @@ import ensureAuthenticated from '@shared/infra/http/middlewares/ensureAuthentica
 
 const courseRouter = Router();
 
-courseRouter.use(ensureAuthenticated);
+courseRouter.get('/course/list', CoursesController.show);
 
+courseRouter.use(ensureAuthenticated);
 courseRouter.post('/course/create', CoursesController.create);
 courseRouter.put('/course/update/:id', CoursesController.update);
 

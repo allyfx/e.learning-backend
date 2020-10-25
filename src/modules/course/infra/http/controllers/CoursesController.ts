@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 
 import CreateCourseService from '@modules/course/services/CreateCourseService';
 import UpdateCourseService from '@modules/course/services/UpdateCourseService';
+import ListCourseService from '@modules/course/services/ListCourseService';
 
 export default {
     async create(request: Request, response: Response): Promise<Response> {
@@ -26,5 +27,13 @@ export default {
         } catch {
             return response.status(400).json({ message: 'Course does not exists' });
         }
+    },
+
+    async show(request: Request, response: Response): Promise<Response> {
+        const listCourses = new ListCourseService();
+
+        const courses = await listCourses.execute();
+
+        return response.status(200).json(courses);
     }
 }
