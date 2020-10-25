@@ -20,6 +20,7 @@ class UpdateCourseService {
 
         courseExists.name = name ? name : courseExists.name;
         courseExists.image = image ? image : courseExists.image;
+        courseExists.updated_at = new Date(Date.now());
 
         return await coursesRepository.save(courseExists);
     }
