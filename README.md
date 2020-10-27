@@ -33,4 +33,4 @@ All routes are initialized with the baseurl of the backend.
 
 ## 📂Project
 - [Backend](https://github.com/allyfx/e.learning-backend).
-- [Mobile]() | Coming soon.
+- [Mobile](https://github.com/allyfx/e.learning-mobile).
