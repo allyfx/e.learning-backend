@@ -6,10 +6,10 @@ import ListCourseService from '@modules/course/services/ListCourseService';
 
 export default {
     async create(request: Request, response: Response): Promise<Response> {
-        const { name, image } = request.body;
+        const { name } = request.body;
         const createCourse = new CreateCourseService();
 
-        const course = await createCourse.execute({ name, image });
+        const course = await createCourse.execute({ name, imageName: request.file.filename });
 
         return response.status(200).json(course);
     },

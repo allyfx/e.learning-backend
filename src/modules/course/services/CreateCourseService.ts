@@ -4,14 +4,14 @@ import Course from '../infra/typeorm/entities/Course';
 
 interface Request {
     name: string;
-    image: string;
+    imageName: string;
 }
 
 class CreateUserService {
-    public async execute({ name, image }: Request): Promise<Course> {
+    public async execute({ name, imageName }: Request): Promise<Course> {
         const coursesRepository = getRepository(Course);
 
-        const course = coursesRepository.create({ name, image });
+        const course = coursesRepository.create({ name, image: imageName });
 
         await coursesRepository.save(course);
 
