@@ -11,7 +11,7 @@ interface Request {
     video_id: string;
 }
 
-class CreateUserService {
+class CreateLessonService {
     public async execute({ name, duration, course_id, description, video_id }: Request): Promise<Lesson> {
         const lessonsRepository = getRepository(Lesson);
         const coursesRepository = getRepository(Course);
@@ -30,4 +30,4 @@ class CreateUserService {
     }
 }
 
-export default CreateUserService;
+export default CreateLessonService;
