@@ -14,7 +14,7 @@ export default {
 
             return response.json(lesson);
         } catch {
-            return response.status(400).json({ message: 'User does not exists.' });
+            return response.status(400).json({ message: 'Course does not exists.' });
         }
     },
     
