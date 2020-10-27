@@ -7,3 +7,4 @@ temp/
 covarage
 ormconfig.json
 dist
+uploads/

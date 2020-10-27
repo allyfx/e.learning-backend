@@ -16,15 +16,16 @@ export default {
 
     async update(request: Request, response: Response): Promise<Response> {
         const { id } = request.params;
-        const { name, image } = request.body;
+        const { name } = request.body;
 
         const updateCourse = new UpdateCourseService();
 
         try {
-            const course = await updateCourse.execute({ id, name, image });
+            const course = await updateCourse.execute({ id, name, imageName: request.file.filename });
 
             return response.status(200).json(course);
-        } catch {
+        } catch (err) {
+            console.log(err);
             return response.status(400).json({ message: 'Course does not exists' });
         }
     },

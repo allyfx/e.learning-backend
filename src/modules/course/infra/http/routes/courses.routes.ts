@@ -11,6 +11,6 @@ const upload = multer(uploadConfig);
 courseRouter.get('/course/list', CoursesController.show);
 
 courseRouter.post('/course/create', ensureAuthenticated, upload.single('image'), CoursesController.create);
-courseRouter.put('/course/update/:id', ensureAuthenticated, CoursesController.update);
+courseRouter.put('/course/update/:id', ensureAuthenticated, upload.single('image'), CoursesController.update);
 
 export default courseRouter;
