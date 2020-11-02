@@ -11,6 +11,9 @@ export default class Course {
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
+    @Column('integer')
+    lessons?: number;
+
     @Column()
     name: string;
 

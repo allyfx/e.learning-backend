@@ -33,8 +33,8 @@ export default {
     async show(request: Request, response: Response): Promise<Response> {
         const listCourses = new ListCourseService();
 
-        const courses = await listCourses.execute();
+        const res = await listCourses.execute();
 
-        return response.status(200).json(courses);
+        return response.status(200).json(res);
     }
 }

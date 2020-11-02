@@ -31,6 +31,10 @@ class CreateLessonService {
 
         await lessonsRepository.save(lesson);
         
+        courseExists.lessons = courseExists.lessons ? courseExists.lessons += 1 : 1;
+
+        await coursesRepository.save(courseExists);
+        
         return lesson;
     }
 }

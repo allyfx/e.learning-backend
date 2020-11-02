@@ -22,6 +22,11 @@ export default class CreateCoursesTable1603549724925 implements MigrationInterfa
                     type: 'varchar'
                 },
                 {
+                    name: 'lessons',
+                    type: 'integer',
+                    isNullable: true,
+                },
+                {
                     name: 'created_at',
                     type: 'timestamp',
                     default: 'now()',

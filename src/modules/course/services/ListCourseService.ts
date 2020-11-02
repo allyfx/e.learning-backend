@@ -6,9 +6,10 @@ import Lesson from '../../lesson/infra/typeorm/entities/Lesson';
 class ListCourseService {
     public async execute(): Promise<Course[]> {
         const coursesRepository = getRepository(Course);
+        const lessonsRepository = getRepository(Lesson);
 
         const courses = await coursesRepository.find();
-
+        
         return courses;
     }
 }
