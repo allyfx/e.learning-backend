@@ -19,9 +19,11 @@ export default {
     },
     
     async show(request: Request, response: Response): Promise<Response> {
+        const { id } = request.params;
+
         const listLessons = new ListLessonsService();
 
-        const lessons = await listLessons.execute();
+        const lessons = await listLessons.execute(id);
 
         return response.status(200).json(lessons);
     }

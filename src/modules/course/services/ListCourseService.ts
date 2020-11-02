@@ -1,6 +1,7 @@
 import { getRepository } from 'typeorm';
 
 import Course from '../infra/typeorm/entities/Course';
+import Lesson from '../../lesson/infra/typeorm/entities/Lesson';
 
 class ListCourseService {
     public async execute(): Promise<Course[]> {

@@ -2,13 +2,9 @@ import {
     Entity,
     PrimaryGeneratedColumn,
     Column,
-    // ManyToOne,
-    // JoinColumn,
     CreateDateColumn,
     UpdateDateColumn,
 } from 'typeorm';
-
-// import Course from '@modules/course/infra/typeorm/entities/Course';
 
 @Entity('lessons')
 class Lesson {

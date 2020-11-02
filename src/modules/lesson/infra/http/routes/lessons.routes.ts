@@ -5,7 +5,7 @@ import ensureAuthenticated from '@shared/infra/http/middlewares/ensureAuthentica
 
 const lessonsRouter = Router();
 
-lessonsRouter.get('/lesson/list', LessonsController.show);
+lessonsRouter.get('/lesson/list/:id', LessonsController.show);
 lessonsRouter.post('/lesson/create', ensureAuthenticated, LessonsController.create);
 
 export default lessonsRouter;
