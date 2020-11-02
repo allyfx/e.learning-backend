@@ -15,7 +15,7 @@ E.learning is one of the rewards of the GoStack bootcamp, where the student gets
 All routes are initialized with the baseurl of the backend.
 
 <strong>Lessons</strong>
-  - `/lesson/list` -> List all lessons in database.
+  - `/lesson/list/:id` -> List all lessons in database. Submit the course id on params.
   - `/lesson/create` -> To create a lesson. Submit a json with `name`, `duration`, `course_id`, `description`, `video_id`. Must be authenticated.
 
 <strong>Courses</strong>
