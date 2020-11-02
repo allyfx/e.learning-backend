@@ -14,6 +14,11 @@ export default class CreateLessonsTable1603642879591 implements MigrationInterfa
                     default: 'uuid_generate_v4()',
                 },
                 {
+                    name: 'count',
+                    type: 'integer',
+                    isUnique: true,
+                },
+                {
                     name: 'name',
                     type: 'varchar',
                 },

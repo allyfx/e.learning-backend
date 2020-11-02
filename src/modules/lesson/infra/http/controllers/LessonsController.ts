@@ -5,16 +5,16 @@ import ListLessonsService from '@modules/lesson/services/ListLessonsService';
 
 export default {
     async create(request: Request, response: Response): Promise<Response> {
-        const { name, duration, course_id, description, video_id  } = request.body;
+        const { name, duration, count, course_id, description, video_id  } = request.body;
 
         const createLesson = new CreateLessonService();
 
         try {
-            const lesson = await createLesson.execute({ name, duration, course_id, description, video_id  });
+            const lesson = await createLesson.execute({ name, duration, count, course_id, description, video_id  });
 
             return response.json(lesson);
-        } catch {
-            return response.status(400).json({ message: 'Course does not exists.' });
+        } catch(err) {
+            return response.status(400).json(err.message);
         }
     },
     

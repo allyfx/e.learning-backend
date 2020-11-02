@@ -1,6 +1,7 @@
 import {
     Entity,
     PrimaryGeneratedColumn,
+    Generated,
     Column,
     CreateDateColumn,
     UpdateDateColumn,
@@ -10,6 +11,9 @@ import {
 class Lesson {
     @PrimaryGeneratedColumn('uuid')
     id: string;
+
+    @Column('integer')
+    count: number;
 
     @Column()
     name: string;
